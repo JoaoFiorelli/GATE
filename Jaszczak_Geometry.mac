@@ -1,0 +1,210 @@
+#######################
+##  JASZCZAK PHANTOM ##
+#######################
+
+
+### FULL BODY
+
+/gate/world/daughters/name Phantom
+/gate/world/daughters/insert cylinder
+/gate/Phantom/geometry/setRmax 11.12  cm
+/gate/Phantom/geometry/setRmin 0. cm
+/gate/Phantom/geometry/setHeight 20. cm
+/gate/Phantom/placement/setTranslation   0.0 0.0 0.0 mm
+/gate/Phantom/setMaterial PMMA
+/gate/Phantom/vis/setColor blue
+/gate/Phantom/vis/forceWireframe
+
+/gate/Phantom/daughters/name sourceMN
+/gate/Phantom/daughters/insert cylinder
+/gate/sourceMN/geometry/setRmax 10.8  cm
+/gate/sourceMN/geometry/setRmin 0. cm
+/gate/sourceMN/geometry/setHeight 18.6 cm
+/gate/sourceMN/placement/setTranslation   0.0 0.0 0.0 mm
+/gate/sourceMN/setMaterial Water
+/gate/sourceMN/vis/setColor magenta
+
+### SPHERES
+
+/gate/sourceMN/daughters/name esfera1
+/gate/sourceMN/daughters/insert sphere
+/gate/esfera1/geometry/setRmax 15.9  mm
+/gate/esfera1/geometry/setRmin 0. mm
+/gate/esfera1/placement/setTranslation   -5.4 0.0 -3.4 cm
+/gate/esfera1/setMaterial PMMA
+/gate/esfera1/vis/setColor green
+
+/gate/sourceMN/daughters/name esfera2
+/gate/sourceMN/daughters/insert sphere
+/gate/esfera2/geometry/setRmax 12.7  mm
+/gate/esfera2/geometry/setRmin 0. mm
+/gate/esfera2/placement/setTranslation   -2.7 -4.677 -3.4 cm
+/gate/esfera2/setMaterial PMMA
+/gate/esfera2/vis/setColor green
+
+/gate/sourceMN/daughters/name esfera3
+/gate/sourceMN/daughters/insert sphere
+/gate/esfera3/geometry/setRmax 9.55  mm
+/gate/esfera3/geometry/setRmin 0. mm
+/gate/esfera3/placement/setTranslation   2.7 -4.677 -3.4 cm
+/gate/esfera3/setMaterial PMMA
+/gate/esfera3/vis/setColor green
+
+/gate/sourceMN/daughters/name esfera4
+/gate/sourceMN/daughters/insert sphere
+/gate/esfera4/geometry/setRmax 7.95  mm
+/gate/esfera4/geometry/setRmin 0. mm
+/gate/esfera4/placement/setTranslation   5.4 0.0 -3.4 cm
+/gate/esfera4/setMaterial PMMA
+/gate/esfera4/vis/setColor green
+
+/gate/sourceMN/daughters/name esfera5
+/gate/sourceMN/daughters/insert sphere
+/gate/esfera5/geometry/setRmax 6.35  mm
+/gate/esfera5/geometry/setRmin 0. mm
+/gate/esfera5/placement/setTranslation   2.7 4.677 -3.4 cm
+/gate/esfera5/setMaterial PMMA
+/gate/esfera5/vis/setColor green
+
+/gate/sourceMN/daughters/name esfera6
+/gate/sourceMN/daughters/insert sphere
+/gate/esfera6/geometry/setRmax 4.75  mm
+/gate/esfera6/geometry/setRmin 0. mm
+/gate/esfera6/placement/setTranslation   -2.7 4.677 -3.4 cm
+/gate/esfera6/setMaterial PMMA
+/gate/esfera6/vis/setColor green
+
+/gate/geometry/rebuild
+
+### CYLINDERS
+
+/gate/sourceMN/daughters/name cilin1
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin1/geometry/setRmax 6.35  mm
+/gate/cilin1/geometry/setRmin 0. cm
+/gate/cilin1/geometry/setHeight 8.8 cm
+/gate/cilin1/placement/setTranslation   2.19 0.0 4.9 cm
+/gate/cilin1/setMaterial PMMA
+/gate/cilin1/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin2
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin2/geometry/setRmax 5.55  mm
+/gate/cilin2/geometry/setRmin 0. cm
+/gate/cilin2/geometry/setHeight 8.8 cm
+/gate/cilin2/placement/setTranslation   1.095 1.897 4.9 cm
+/gate/cilin2/setMaterial PMMA
+/gate/cilin2/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin3
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin3/geometry/setRmax 4.75  mm
+/gate/cilin3/geometry/setRmin 0. cm
+/gate/cilin3/geometry/setHeight 8.8 cm
+/gate/cilin3/placement/setTranslation   -1.095 1.897 4.9 cm
+/gate/cilin3/setMaterial PMMA
+/gate/cilin3/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin4
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin4/geometry/setRmax 3.95  mm
+/gate/cilin4/geometry/setRmin 0. cm
+/gate/cilin4/geometry/setHeight 8.8 cm
+/gate/cilin4/placement/setTranslation   -2.19 0.0 4.9 cm
+/gate/cilin4/setMaterial PMMA
+/gate/cilin4/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin5
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin5/geometry/setRmax 3.2  mm
+/gate/cilin5/geometry/setRmin 0. cm
+/gate/cilin5/geometry/setHeight 8.8 cm
+/gate/cilin5/placement/setTranslation   -1.095 -1.897 4.9 cm
+/gate/cilin5/setMaterial PMMA
+/gate/cilin5/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin5fundo
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin5fundo/geometry/setRmax 3.2  mm
+/gate/cilin5fundo/geometry/setRmin 0. cm
+/gate/cilin5fundo/geometry/setHeight 8.8 cm
+/gate/cilin5fundo/placement/setTranslation   -4.8 -8.45 4.9 cm
+/gate/cilin5fundo/setMaterial PMMA
+/gate/cilin5fundo/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin6
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin6/geometry/setRmax 2.4  mm
+/gate/cilin6/geometry/setRmin 0. cm
+/gate/cilin6/geometry/setHeight 8.8 cm
+/gate/cilin6/placement/setTranslation   1.095 -1.897 4.9 cm
+/gate/cilin6/setMaterial PMMA
+/gate/cilin6/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin6l1
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin6l1/geometry/setRmax 2.4  mm
+/gate/cilin6l1/geometry/setRmin 0. cm
+/gate/cilin6l1/geometry/setHeight 8.8 cm
+/gate/cilin6l1/placement/setTranslation   4.6 -8.0 4.9 cm
+/gate/cilin6l1/setMaterial PMMA
+/gate/cilin6l1/vis/setColor red
+
+/gate/sourceMN/daughters/name cilin6l2
+/gate/sourceMN/daughters/insert cylinder
+/gate/cilin6l2/geometry/setRmax 2.4  mm
+/gate/cilin6l2/geometry/setRmin 0. cm
+/gate/cilin6l2/geometry/setHeight 8.8 cm
+/gate/cilin6l2/placement/setTranslation   5.0 -8.6 4.9 cm
+/gate/cilin6l2/setMaterial PMMA
+/gate/cilin6l2/vis/setColor red
+
+/gate/cilin1/repeaters/insert quadrant
+/gate/cilin1/quadrant/setLineNumber 4
+/gate/cilin1/quadrant/setOrientation 0 deg
+/gate/cilin1/quadrant/setCopySpacing 2.6 cm
+/gate/cilin1/quadrant/setMaxRange 90 cm 
+
+/gate/cilin2/repeaters/insert quadrant
+/gate/cilin2/quadrant/setLineNumber 4
+/gate/cilin2/quadrant/setOrientation 60 deg
+/gate/cilin2/quadrant/setCopySpacing 2.4 cm
+/gate/cilin2/quadrant/setMaxRange 90 cm
+
+/gate/cilin3/repeaters/insert quadrant
+/gate/cilin3/quadrant/setLineNumber 5
+/gate/cilin3/quadrant/setOrientation 120 deg
+/gate/cilin3/quadrant/setCopySpacing 1.9 cm
+/gate/cilin3/quadrant/setMaxRange 90 cm 
+
+/gate/cilin4/repeaters/insert quadrant
+/gate/cilin4/quadrant/setLineNumber 6
+/gate/cilin4/quadrant/setOrientation 180 deg
+/gate/cilin4/quadrant/setCopySpacing 1.6 cm
+/gate/cilin4/quadrant/setMaxRange 90 cm 
+
+/gate/cilin5/repeaters/insert quadrant
+/gate/cilin5/quadrant/setLineNumber 7
+/gate/cilin5/quadrant/setOrientation 240 deg
+/gate/cilin5/quadrant/setCopySpacing 1.25 cm
+/gate/cilin5/quadrant/setMaxRange 90 cm 
+
+/gate/cilin5fundo/repeaters/insert linear
+/gate/cilin5fundo/linear/setRepeatNumber 6
+/gate/cilin5fundo/linear/setRepeatVector 1.072 -0.63 0. cm 
+
+/gate/cilin6/repeaters/insert quadrant
+/gate/cilin6/quadrant/setLineNumber 9
+/gate/cilin6/quadrant/setOrientation 300 deg
+/gate/cilin6/quadrant/setCopySpacing 0.9 cm
+/gate/cilin6/quadrant/setMaxRange 90 cm  
+
+/gate/cilin6l1/repeaters/insert linear
+/gate/cilin6l1/linear/setRepeatNumber 8
+/gate/cilin6l1/linear/setRepeatVector 0.775926 0.45600182 0. cm 
+
+/gate/cilin6l2/repeaters/insert linear
+/gate/cilin6l2/linear/setRepeatNumber 5
+/gate/cilin6l2/linear/setRepeatVector 0.775926 0.45600182 0. cm 
+
+/gate/geometry/rebuild
