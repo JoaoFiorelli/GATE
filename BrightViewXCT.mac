@@ -1,0 +1,90 @@
+############################
+##     BRIGHTVIEW XCT     ##
+############################
+
+
+## Scanner Head
+
+/gate/world/daughters/name SPECThead
+/gate/world/daughters/insert box
+/gate/SPECThead/geometry/setXLength  10. cm
+/gate/SPECThead/geometry/setYLength 50. cm
+/gate/SPECThead/geometry/setZLength 60. cm
+/gate/SPECThead/placement/setTranslation  20.0 0. 0. cm
+/gate/SPECThead/moves/insert orbiting
+/gate/SPECThead/orbiting/setSpeed 0.15 deg/s
+/gate/SPECThead/orbiting/setPoint1 0 0 0 cm
+/gate/SPECThead/orbiting/setPoint2 0 0 1 cm
+/gate/SPECThead/setMaterial Air
+/gate/SPECThead/vis/forceWireframe
+/gate/SPECThead/vis/setColor green
+
+/gate/geometry/rebuild
+
+## Shielding
+
+/gate/SPECThead/daughters/name shielding
+/gate/SPECThead/daughters/insert box
+/gate/shielding/geometry/setXLength  7.3 cm
+/gate/shielding/geometry/setYLength 50. cm
+/gate/shielding/geometry/setZLength 60. cm
+/gate/shielding/placement/setTranslation  1.35 0. 0. cm
+/gate/shielding/setMaterial Lead
+/gate/shielding/vis/setColor red
+/gate/shielding/vis/forceWireframe
+
+## Collimator
+
+/gate/SPECThead/daughters/name collimator
+/gate/SPECThead/daughters/insert box
+/gate/collimator/geometry/setXLength 27.0 mm
+/gate/collimator/geometry/setYLength 50. cm
+/gate/collimator/geometry/setZLength 60. cm
+/gate/collimator/placement/setTranslation  -3.65 0. 0. cm
+/gate/collimator/setMaterial Lead
+/gate/collimator/vis/setColor magenta
+/gate/collimator/vis/forceWireframe
+
+/gate/geometry/rebuild
+
+##
+# Insert the first hole of air in the collimator
+##
+/gate/collimator/daughters/name hole
+/gate/collimator/daughters/insert hexagone
+/gate/hole/geometry/setHeight 27.0 mm
+/gate/hole/geometry/setRadius 1.0566 mm
+/gate/hole/placement/setRotationAxis 0 1 0
+/gate/hole/placement/setRotationAngle 90 deg
+/gate/hole/setMaterial Air
+##
+# Repeat the hole in an array
+##
+/gate/hole/repeaters/insert cubicArray
+/gate/hole/cubicArray/setRepeatNumberX 1
+/gate/hole/cubicArray/setRepeatNumberY 190
+/gate/hole/cubicArray/setRepeatNumberZ 140
+/gate/hole/cubicArray/setRepeatVector 0. 2.2652  3.964 mm
+/gate/geometry/rebuild
+##
+# Repeat these holes in a linear
+##
+/gate/hole/repeaters/insert linear
+/gate/hole/linear/setRepeatNumber 2
+/gate/hole/linear/setRepeatVector 0. 1.1326 1.982 mm
+
+## CRYSTAL
+
+/gate/shielding/daughters/name crystal
+/gate/shielding/daughters/insert box
+/gate/crystal/geometry/setXLength 0.95 cm
+/gate/crystal/geometry/setYLength  40.6 cm
+/gate/crystal/geometry/setZLength  53.9 cm
+/gate/crystal/placement/setTranslation  -3.175 0. 0. cm
+/gate/crystal/setMaterial NaI
+/gate/crystal/vis/setColor yellow
+
+/gate/SPECThead/repeaters/insert ring
+/gate/SPECThead/ring/setRepeatNumber 2
+
+/gate/geometry/rebuild
