@@ -21,6 +21,9 @@ Para a construção do objeto simulador Jaszczak, realizamos o mesmo processo, p
 
 ## Referências
 
-##Autor
+Medical Expo (2019). http://pdf.medicalexpo.com/pdf/philips-healthcare/brightview-x-xct/70721-170301-2.html; 15 de Julho de 2019:
+SPECT (2020). http://www.spect.com/pub/Flanged_Jaszczak_Phantoms.pdf, 26 de Março de 2020.
+
+## Autor
 
 LinkedIn: https://www.linkedin.com/in/jo%C3%A3o-pedro-fiorelli-820942124/
